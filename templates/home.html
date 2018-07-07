@@ -1,0 +1,35 @@
+<!-- only unique code here -->
+{% extends "layout.html" %}
+{% block content %}
+    <div class="grid">
+        <div class="grid__top">
+            <h1 class="grid__top-title">
+                GRID TOP TITLE
+            </h1>
+        </div>
+        <div class="grid__body">
+            {% for post in posts %}
+                <div class="blog-item">
+                    <p><span class="blog-item__author">{{post.author}}</span> on <span class="date">{{post.date_posted}}</span></p>
+                    <h1 class='blog-item__title'>{{post.title}}</h1>
+                    <p class='blog-item__post'>{{post.content}}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="grid__sidebar">
+            <h3 class="grid__sidebar-title">
+                Grid Sidebar Title
+            </h3>
+        </div>
+
+        <div class="grid__bottom">
+            <h1 class="grid__bottom-title">
+                GRID BOTTOM TTITLE
+            </h1>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}
